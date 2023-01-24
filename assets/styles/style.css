@@ -187,5 +187,18 @@ header nav .nav__links ul {
 }
 
 .hero__text {
-  background-color: red;
+  margin-top: 2rem;
+  text-align: center;
+}
+.hero__text h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.hero__text p {
+  font-size: 1.5rem;
+}
+
+.hero__image {
+  margin-top: 3rem;
+  text-align: center;
 }
