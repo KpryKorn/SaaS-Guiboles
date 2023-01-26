@@ -273,6 +273,9 @@ section {
   font-weight: 600;
   color: var(--clr-neutral-100);
 }
+.contact__section img {
+  max-height: 500px;
+}
 
 form {
   margin-block: 1.4rem;
@@ -316,6 +319,9 @@ footer {
 
 footer a {
   text-decoration: underline;
+}
+footer a img:hover {
+  opacity: 0.5;
 }
 
 .social__links img {
