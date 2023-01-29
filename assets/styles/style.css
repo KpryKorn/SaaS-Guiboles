@@ -45,6 +45,10 @@ p {
 
 /*  UTILITY CLASSES */
 
+.active {
+  color: var(--clr-main);
+}
+
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -249,6 +253,9 @@ section {
   opacity: 0.9;
   font-weight: 300;
 }
+.hero__text span {
+  text-decoration: underline;
+}
 
 .hero__cta {
   margin-top: 1rem;
@@ -264,6 +271,11 @@ section {
 .hero__video {
   margin-block: 3rem;
   text-align: center;
+}
+.hero__video img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* CONTACT SECTION */
@@ -351,9 +363,7 @@ summary {
 /* FOOTER */
 
 footer {
-  border-top: 1px solid black;
   padding-block: 0.9rem;
-  margin-top: 1rem;
 }
 
 footer a {
