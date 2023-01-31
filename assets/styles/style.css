@@ -253,10 +253,9 @@ section {
   opacity: 0.9;
   font-weight: 300;
 }
-.hero__text span {
+.hero__text a#mail-to {
   text-decoration: underline;
 }
-
 .hero__cta {
   margin-top: 1rem;
 }
@@ -276,6 +275,11 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.legal__heading {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 /* CONTACT SECTION */
