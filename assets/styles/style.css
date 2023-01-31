@@ -282,6 +282,10 @@ section {
   font-size: 1.2rem;
 }
 
+.section__accompagner {
+  height: 80vh;
+}
+
 /* CONTACT SECTION */
 
 .contact__section h3 {

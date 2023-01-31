@@ -58,11 +58,17 @@
       <div class="container">
         <h3>Vous souhaitez nous contacter ?</h3>
         <div class="split">
-          <form action="" class="flex-col">
-            <input type="text" name="name" placeholder="Prénom" />
-            <input type="text" name="nom de famille" placeholder="Nom" />
+          <form action="" name="contact-us" class="flex-col">
+            <input type="text" name="prenom" placeholder="Prénom" />
+            <input type="text" name="nom" placeholder="Nom" />
             <input type="text" name="societe" placeholder="Société" />
             <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="phone"
+              name="telephone"
+              id="phone"
+              placeholder="N° de téléphone"
+            />
             <textarea
               name="message"
               id="message"
@@ -102,5 +108,20 @@
         </div>
       </div>
     </footer>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwbz4FEutEOMSnJxkxoj_0FTmyCgxSdZp8OFPFU7Xi6M6JZkddH3fhMhBZKN0zV8cny/exec";
+      const form = document.forms["contact-us"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            form.reset();
+            alert("Success!");
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
