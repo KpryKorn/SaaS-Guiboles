@@ -215,9 +215,8 @@ header {
   color: var(--clr-neutral-900);
   background-color: var(--clr-neutral-100);
 }
-
 header .logo img {
-  width: 50px;
+  width: 150px;
 }
 
 nav {
