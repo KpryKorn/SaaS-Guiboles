@@ -85,7 +85,7 @@
           </div>
           <div class="hero__video">
             <video controls>
-              <source src="./assets/images/Vidéo promo Guiboles.mp4" />
+              <source src="./assets/images/video_promo_guiboles.mp4" />
             </video>
           </div>
         </div>
@@ -165,20 +165,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwbz4FEutEOMSnJxkxoj_0FTmyCgxSdZp8OFPFU7Xi6M6JZkddH3fhMhBZKN0zV8cny/exec";
-      const form = document.forms["contact-us"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            form.reset();
-            alert("Success!");
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
   </body>
 </html>
