@@ -38,6 +38,9 @@
               <li>
                 <a href="accompagnement.html" class="underline">Accompagner</a>
               </li>
+              <li class="cta__contact">
+                <a href="contact.html" class="underline">Contact</a>
+              </li>
             </ul>
           </div>
 
@@ -49,6 +52,11 @@
                 <polyline points="8 1 12 5 8 9"></polyline>
               </svg>
             </a>
+          </div>
+          <div class="hamburger">
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
           </div>
         </nav>
       </div>
@@ -90,7 +98,6 @@
         <div class="flex-row">
           <div class="flex-col">
             <a href="legal.html">Mentions légales</a>
-            <a href="legal.html">CGU</a>
           </div>
           <p>Les Guiboles 2023 - tous droits réservés</p>
           <div class="social__links">
@@ -108,20 +115,7 @@
         </div>
       </div>
     </footer>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwbz4FEutEOMSnJxkxoj_0FTmyCgxSdZp8OFPFU7Xi6M6JZkddH3fhMhBZKN0zV8cny/exec";
-      const form = document.forms["contact-us"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            form.reset();
-            alert("Success!");
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+    <script src="formulaire.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -205,6 +205,65 @@ body {
 
 /* HEADER */
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr-neutral-900);
+}
+.cta__contact {
+  display: none;
+}
+
+/*  RESPONSIVE MENU BURGER */
+
+@media (max-width: 65.0625em) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .hamburger__bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .hamburger__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .hamburger__bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .cta__contact {
+    display: block;
+  }
+
+  .nav__links,
+  .nav__cta {
+    padding-block: 1rem;
+    position: fixed;
+    right: -100%;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-neutral-100);
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  header nav .nav__links ul {
+    flex-direction: column;
+  }
+
+  .nav__links.active,
+  .nav__cta.active {
+    right: 0;
+  }
+}
 header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -260,6 +319,7 @@ section {
 }
 .hero__cta .btn:first-of-type {
   margin-right: 1rem;
+  margin-block: 1rem;
 }
 .hero__cta .btn,
 .hero__cta .btn2 {
@@ -279,10 +339,6 @@ section {
 .legal__heading {
   font-weight: 600;
   font-size: 1.2rem;
-}
-
-.section__accompagner {
-  height: 80vh;
 }
 
 /* CONTACT SECTION */
